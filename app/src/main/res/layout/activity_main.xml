@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/backgroundColor"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/rr_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <TextView
+                android:id="@+id/tvHeaderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="Gutenberg \nProject"
+                android:textColor="@color/headerColor"
+                android:textSize="32sp"
+                fontPath="fonts/Montserrat-SemiBold.ttf"
+                tools:ignore="MissingPrefix"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="A social cataloging website that allows \nyou tofreely search its database of \nbooks,annotations, and reviews."
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                fontPath="fonts/Montserrat-SemiBold.ttf"
+                tools:ignore="MissingPrefix"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recyclerCategory"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

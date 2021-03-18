@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_marginTop="@dimen/_5sdp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <ImageView
+
+           android:layout_gravity="center_vertical"
+           android:layout_marginLeft="@dimen/_5sdp"
+           android:src="@drawable/ic_back"
+           android:layout_width="@dimen/_15sdp"
+           android:layout_height="wrap_content">
+       </ImageView>
+
+      <TextView
+          android:fontFamily="@font/montserratsemibold"
+          android:layout_marginLeft="@dimen/_10sdp"
+          android:layout_gravity="center_vertical"
+          android:textSize="30dp"
+          android:textColor="@color/themecolor"
+          android:text="@string/fiction"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/_30sdp"/>
+
+
+   </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+
+        android:gravity="center_vertical"
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        >
+
+        <androidx.appcompat.widget.SearchView
+
+            android:background="@null"
+            android:id="@+id/searchView"
+            app:defaultQueryHint="@string/search"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:iconifiedByDefault="false"
+
+            />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingTop="@dimen/_5sdp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/recyclerBooks"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
