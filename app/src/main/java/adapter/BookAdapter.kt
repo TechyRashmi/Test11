@@ -33,8 +33,8 @@ import java.util.ArrayList
 class BookAdapter : RecyclerView.Adapter<Holder> {
 
     lateinit var image: Array<Int>
-    lateinit var array: ArrayList<BookModel>
-    lateinit var ctx:Context
+    var array: ArrayList<BookModel>
+    var ctx:Context
 
     companion object{
     }
@@ -81,6 +81,7 @@ class BookAdapter : RecyclerView.Adapter<Holder> {
                 }
                 else
                 {
+                    //if no maches found show alert
                     showAlertDialog()
                 }
             }
@@ -109,6 +110,8 @@ class BookAdapter : RecyclerView.Adapter<Holder> {
         dialog.show()
 
     }
+
+
 
     fun open_file(url:String)
     {

@@ -14,6 +14,7 @@
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"/>
         <Button
+            android:clickable="false"
             android:layout_marginLeft="@dimen/_10sdp"
             android:id="@+id/btnCategory"
             android:layout_gravity="center_vertical"

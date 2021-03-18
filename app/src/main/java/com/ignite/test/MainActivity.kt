@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager.VERTICAL,
             false
         )
-        val adapter = CategoryAdapter(image_array, category_array)
+        val adapter = CategoryAdapter(image_array,this, category_array)
         recyclerCategory.setAdapter(adapter)
 
         setFadeAnimation(recyclerCategory)

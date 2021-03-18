@@ -19,7 +19,7 @@
             android:orientation="vertical"
             android:id="@+id/rr_header"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             >
 
             <TextView
@@ -32,7 +32,7 @@
                 android:text="Gutenberg \nProject"
                 android:textColor="@color/headerColor"
                 android:textSize="32sp"
-                fontPath="fonts/Montserrat-SemiBold.ttf"
+                android:fontFamily="@font/montserratsemibold"
                 tools:ignore="MissingPrefix"
                 />
             <TextView
@@ -41,10 +41,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="20dp"
                 android:gravity="center_vertical"
-                android:text="A social cataloging website that allows \nyou tofreely search its database of \nbooks,annotations, and reviews."
+                android:text="@string/a_social_cataloging_website_that_allows_nyou_to_freely_search_its_database_of_nbooks_annotations_and_reviews"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                fontPath="fonts/Montserrat-SemiBold.ttf"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/montserratsemibold"
                 tools:ignore="MissingPrefix"
                 />
 

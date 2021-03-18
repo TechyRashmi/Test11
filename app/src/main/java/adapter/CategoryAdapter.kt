@@ -3,6 +3,7 @@ package adapter
 
 import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.text.Editable
@@ -20,6 +21,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ignite.test.R
+import com.ignite.test.SecondActivity
 import kotlinx.android.synthetic.main.category_items.view.*
 
 
@@ -32,9 +34,10 @@ class CategoryAdapter : RecyclerView.Adapter<Holder> {
     companion object{
      }
 
-    constructor(image: Array<Int>, array: Array<String>) {
+    constructor(image: Array<Int>,ctx: Context, array: Array<String>) {
         this.image = image
         this.array = array
+        this.ctx=ctx
     }
 
     constructor(ctx: Context)
@@ -53,7 +56,15 @@ class CategoryAdapter : RecyclerView.Adapter<Holder> {
         {
             ivCategory.setImageResource(image[position])
             btnCategory.setText(array[position])
+
+
+            holder.itemView.setOnClickListener{
+                val i = Intent(ctx, SecondActivity::class.java
+                ).putExtra("topic",array[position])
+                ctx.startActivity(i)
+            }
         }
+
 
     }
     override fun getItemCount(): Int {

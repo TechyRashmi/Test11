@@ -60,5 +60,9 @@ dependencies {
     //color
     implementation 'com.github.bassaer:materialdesigncolors:1.0.0'
 
+
+    //progress bar
+    implementation 'com.bitvale:lightprogress:1.0.1'
+
     apply plugin: "org.jetbrains.kotlin.android.extensions"
 }
